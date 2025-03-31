@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AC_Falling_Firebolt
+  m_Controller: {fileID: 9100000, guid: 50c96bce204daab40b324be79682b552, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 0a25c33059fe2464b8ff7730059c7dbe, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 161af49b7f2cdac42965f67d033809e6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3c2d7ef5191f3a44db950359091c6dfc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fafb8ed391d23df4bb2c9990c489de16, type: 2}

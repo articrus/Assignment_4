@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6579600958217946699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3939173097111994863}
+  - component: {fileID: 4449535877178551307}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3939173097111994863
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579600958217946699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4449535877178551307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6579600958217946699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61acac59f4ae7314ba7f2981c6da3420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageText: {fileID: 246729808256042024, guid: 097e2aca8cf33b7439d73303598a4ded, type: 3}
+  healText: {fileID: 246729808256042024, guid: 5b414aa6168795e4a920673b46d1270a, type: 3}
+  tutorialText:
+  - {fileID: 246729808256042024, guid: ae107dfc4ff0e6b4aa651c5b65906098, type: 3}
+  - {fileID: 246729808256042024, guid: c5555ab157b45c64b9132209d3b9f9b5, type: 3}
+  - {fileID: 246729808256042024, guid: b996d4b8e22c21043b98de40e30879a0, type: 3}
+  - {fileID: 246729808256042024, guid: a5c026e44106824448c8ff7881df8c1e, type: 3}
+  - {fileID: 246729808256042024, guid: 0dda8bba81899d24581ceceef714b3c7, type: 3}
+  - {fileID: 246729808256042024, guid: b004f8625b397bb429acb9b650eb00a9, type: 3}
+  - {fileID: 246729808256042024, guid: 182faccab187748418ac99f33009e0f6, type: 3}
+  - {fileID: 246729808256042024, guid: 5a1fdd61fa561664d920c2933dc1dfb5, type: 3}
+  - {fileID: 246729808256042024, guid: 025ef86dd4287fb47b0589da8e2a283a, type: 3}
+  - {fileID: 246729808256042024, guid: 37296afd7e909e443ae75d6e84a0087e, type: 3}
+  - {fileID: 246729808256042024, guid: 5d897142f189c934eaedfd785608a02d, type: 3}
+  canvas: {fileID: 4547690232264897299, guid: 39ccb36153d8da846b06fb06e9118933, type: 3}
