@@ -67,6 +67,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "WeaponSwitchL",
+                    "type": "Button",
+                    "id": "43df3d2e-c1bb-4bc1-b87e-6a19acabbfae",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "WeaponSwitchR",
+                    "type": "Button",
+                    "id": "1aeaae47-ffe2-462e-a639-8c2ba99a3dd9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -292,17 +310,6 @@
                 },
                 {
                     "name": "",
-                    "id": "8319dcf3-d99a-4656-8e6c-f7f157479750",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "066d1c9f-8705-49fe-8d87-0b29976b4b8a",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
@@ -347,23 +354,34 @@
                 },
                 {
                     "name": "",
-                    "id": "8d5d5210-2104-4095-9d5a-6d7b225ceac0",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Spell",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "3894c601-2e4d-4145-8797-1c61c698c3c9",
                     "path": "<Keyboard>/m",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
                     "action": "Stuck",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1ff61fa2-befa-4e45-857b-a03d18fd2007",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WeaponSwitchL",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5050e8b3-436a-4380-a5dd-d55efb56807e",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WeaponSwitchR",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 /*
  * Written By: Gianni Coladonato
- * ID: 2414537
- * Last Modified (Date): 08-12-2024
- * This script is used to preserve Player data inbetween scenes
+ * Date Created: 08-12-2025 | Last Modified: 13-04-2025
+ * 
+ * This script is used to store player info between scenes
  */
 [CreateAssetMenu(fileName = "PlayerInfo", menuName = "Persistance")]
 public class PlayerInfo : ScriptableObject
@@ -18,4 +18,5 @@ public class PlayerInfo : ScriptableObject
     public Vector2[] spawnPositions;
     public bool keyA;
     public bool keyB;
+    public List<GameObject> weapons;
 }

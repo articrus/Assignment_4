@@ -256,6 +256,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d29557873308664fa0bdced864015c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDamage: {fileID: 0}
+  baseWeapon: {fileID: 8232274952783397525, guid: e53a34d1f5d81b8458dee758f3e6035c, type: 3}
+  currentWeapon: {fileID: 0}
+  testWeapons:
+  - {fileID: 8232274952783397525, guid: f59386b9f8620b7429868996cc58f29c, type: 3}
+  - {fileID: 8232274952783397525, guid: 4af351934fc320a43ad6079152e5747d, type: 3}
   playerInfo: {fileID: 11400000, guid: a8fec27cb3ed0664cb65a11fe1b9ac61, type: 2}
   walkSpeed: 5
   runSpeed: 8
@@ -434,6 +440,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: f0e51c1f-5489-4e01-b79e-7214f4ba56c7
     m_ActionName: Player/Stuck[/Keyboard/m]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5922378872485759864}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnWeaponSwitchLeft
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 43df3d2e-c1bb-4bc1-b87e-6a19acabbfae
+    m_ActionName: Player/WeaponSwitchL[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5922378872485759864}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnWeaponSwitchRight
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 1aeaae47-ffe2-462e-a639-8c2ba99a3dd9
+    m_ActionName: Player/WeaponSwitchR[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

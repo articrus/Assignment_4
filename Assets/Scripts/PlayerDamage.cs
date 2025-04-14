@@ -18,6 +18,14 @@ public class PlayerDamage : MonoBehaviour
         meleeTwo = transform.GetChild(1).GetComponent<Attack>();
     }
 
+    public void ChangeWeaponStats(WeaponStats stats)
+    {
+        meleeOne.damage = stats.attackDamages.x;
+        meleeOne.knockback = stats.firstAttack;
+        meleeTwo.damage = stats.attackDamages.y;
+        meleeTwo.knockback = stats.secondAttack;
+    }
+
     public void ApplyDamageBoost(float boost)
     {
         meleeOne.damage *= boost;
@@ -28,5 +36,17 @@ public class PlayerDamage : MonoBehaviour
     {
         meleeOne.damage /= boost;
         meleeTwo.damage /= boost;
+    }
+
+    public void ApplyKnockbackBoost(float boost)
+    {
+        meleeOne.knockback *= boost;
+        meleeTwo.knockback *= boost;
+    }
+
+    public void RemoveKnockbackBoost(float boost)
+    {
+        meleeOne.knockback /= boost;
+        meleeTwo.knockback /= boost;
     }
 }

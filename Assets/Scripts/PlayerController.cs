@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 /*
  * Written By: Gianni Coladonato
- * ID: 2414537
- * Last Modified (Date): 19-11-2024
+ * Date Created: 19-11-2025 | Last Modified: 13-04-2025
+ * 
+ * This script is used to control the player and manage inputs
  */
-//This script allows the player to do all its functions
-//There components are MANDATORY for the player to function
 [RequireComponent(typeof(Rigidbody2D), typeof(TouchingDirections), typeof(Damageable))]
 
 public class PlayerController : MonoBehaviour
@@ -21,6 +21,11 @@ public class PlayerController : MonoBehaviour
     Damageable damageable;
     LevelLoader switcher;
     public PlayerDamage playerDamage;
+    public LinkedList<GameObject> weapons;
+    public GameObject baseWeapon;
+    [SerializeField] GameObject currentWeapon;
+    //Temporary for testing
+    [SerializeField] List<GameObject> testWeapons;
 
     //Player variables
     public PlayerInfo playerInfo;
@@ -106,6 +111,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        weapons = new LinkedList<GameObject>();
         playerDamage = GetComponentInChildren<PlayerDamage>();
         rigidbod = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -129,6 +135,24 @@ public class PlayerController : MonoBehaviour
         jumpBoost = playerInfo.jumpBoost;
         keyA = playerInfo.keyA;
         keyB = playerInfo.keyB;
+        if(playerInfo.weapons.Count > 1)
+        {
+            foreach (GameObject weapon in playerInfo.weapons)
+            {
+                weapons.AddLast(weapon);
+            }
+        }
+        else
+        {
+            weapons.AddLast(baseWeapon);
+            //For testing the code
+            foreach(GameObject weapon in testWeapons)
+            {
+                weapons.AddLast(weapon);
+            }
+        }
+        currentWeapon = weapons.First.Value;
+        SetCurrentWeapon(currentWeapon);
         anim.SetBool(AnimationStrings.hasSpellBolt, hasSpellBolt);
     }
 
@@ -148,6 +172,11 @@ public class PlayerController : MonoBehaviour
         playerInfo.jumpBoost = jumpBoost;
         playerInfo.keyA = keyA;
         playerInfo.keyB = keyB;
+        playerInfo.weapons.Clear();
+        foreach(GameObject weapon in weapons)
+        {
+            playerInfo.weapons.Add(weapon);
+        }
     }
 
     private void FixedUpdate()
@@ -230,5 +259,69 @@ public class PlayerController : MonoBehaviour
     public void OnStuck(InputAction.CallbackContext context)
     {
         if(context.started) { anim.SetBool(AnimationStrings.isAlive, false); }
+    }
+
+    public void SetCurrentWeapon(GameObject currentWeapon)
+    {
+        WeaponStats stats = currentWeapon.GetComponent<WeaponStats>();
+        playerDamage.ChangeWeaponStats(stats);
+        Debug.Log($"Changed weapon to {currentWeapon.name}");
+    }
+
+    public void OnWeaponSwitchLeft(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            if(weapons.Count > 1)
+            {
+                LinkedListNode<GameObject> navigator = weapons.Find(currentWeapon);
+                if(navigator.Previous != null)
+                {
+                    currentWeapon = navigator.Previous.Value;
+                    SetCurrentWeapon(currentWeapon);
+                }else if(navigator.Previous == null && weapons.Last.Value != currentWeapon) 
+                {
+                    currentWeapon = weapons.Last.Value;
+                    SetCurrentWeapon(currentWeapon);
+                }
+                else
+                {
+                    //Do nothing
+                }
+            }
+            else
+            {
+                //Only one weapon, do nothing
+            }
+        }
+    }
+
+    public void OnWeaponSwitchRight(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            if(weapons.Count > 1)
+            {
+                LinkedListNode<GameObject> navigator = weapons.Find(currentWeapon);
+                if(navigator.Next != null)
+                {
+                    currentWeapon = navigator.Next.Value;
+                    SetCurrentWeapon(currentWeapon);
+                }
+                else if(navigator.Next == null && weapons.First.Value != currentWeapon)
+                {
+                    currentWeapon = weapons.First.Value;
+                    SetCurrentWeapon(currentWeapon);
+                }
+                else
+                {
+                    //Do nothing
+                }
+            }
+            else
+            {
+                //Do nothing
+            }
+        }
     }
 }
