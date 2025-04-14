@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     TouchingDirections touchingDirections;
     Damageable damageable;
     LevelLoader switcher;
+    public PlayerDamage playerDamage;
 
     //Player variables
     public PlayerInfo playerInfo;
@@ -105,6 +106,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        playerDamage = GetComponentInChildren<PlayerDamage>();
         rigidbod = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         touchingDirections = GetComponent<TouchingDirections>();
