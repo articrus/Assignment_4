@@ -265,7 +265,8 @@ public class PlayerController : MonoBehaviour
     {
         WeaponStats stats = currentWeapon.GetComponent<WeaponStats>();
         playerDamage.ChangeWeaponStats(stats);
-        Debug.Log($"Changed weapon to {currentWeapon.name}");
+        CanvasManager.CMInstance.SetCurrentWeaponImage(currentWeapon.GetComponent<SpriteRenderer>().sprite);
+        //Debug.Log($"Changed weapon to {currentWeapon.name}");
     }
 
     public void OnWeaponSwitchLeft(InputAction.CallbackContext context)

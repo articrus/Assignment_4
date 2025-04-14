@@ -100,3 +100,4 @@ MonoBehaviour:
   attackDamages: {x: 6, y: 8}
   firstAttack: {x: 5, y: 4}
   secondAttack: {x: 8, y: 4}
+  weaponSprite: {fileID: -1247893392, guid: 04671677b2f1d1e47b0eab03a8edccf3, type: 3}
