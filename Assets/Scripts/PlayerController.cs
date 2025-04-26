@@ -27,6 +27,9 @@ public class PlayerController : MonoBehaviour
     //Temporary for testing
     [SerializeField] List<GameObject> testWeapons;
 
+    //Instance
+    public static PlayerController PCInstance;
+
     //Player variables
     public PlayerInfo playerInfo;
     public float walkSpeed = 4.0f;
@@ -39,6 +42,15 @@ public class PlayerController : MonoBehaviour
     public float jumpBoost = 1.0f;
     public bool hasSpellJump;
     public bool hasSpellBolt;
+
+    //Upgrade boosts
+    public int spdBoost;
+    private float atkBoost;
+    public float AttackBoost
+    {
+        get { return atkBoost; }
+        set { atkBoost = value; playerDamage.ApplyDamageBoost(atkBoost); }
+    }
 
     //If the player can move, either walk or run if the player is running
     public float CurrentMoveSpeed
@@ -111,6 +123,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        if(PCInstance == null) { PCInstance = this; }
         weapons = new LinkedList<GameObject>();
         playerDamage = GetComponentInChildren<PlayerDamage>();
         rigidbod = GetComponent<Rigidbody2D>();
@@ -135,6 +148,8 @@ public class PlayerController : MonoBehaviour
         jumpBoost = playerInfo.jumpBoost;
         keyA = playerInfo.keyA;
         keyB = playerInfo.keyB;
+        atkBoost = playerInfo.atkBoost;
+        spdBoost = playerInfo.spdBoost;
         if(playerInfo.weapons.Count > 1)
         {
             foreach (GameObject weapon in playerInfo.weapons)
@@ -172,6 +187,8 @@ public class PlayerController : MonoBehaviour
         playerInfo.jumpBoost = jumpBoost;
         playerInfo.keyA = keyA;
         playerInfo.keyB = keyB;
+        playerInfo.spdBoost = spdBoost;
+        playerInfo.atkBoost = atkBoost;
         playerInfo.weapons.Clear();
         foreach(GameObject weapon in weapons)
         {
@@ -182,7 +199,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         //If not stunnded (lockvelocity) prevent the player from moving 
-        if (!damageable.LockVelocity) { rigidbod.velocity = new Vector2(moveInput.x * CurrentMoveSpeed, rigidbod.velocity.y); }
+        if (!damageable.LockVelocity) { rigidbod.velocity = new Vector2(moveInput.x * CurrentMoveSpeed * spdBoost, rigidbod.velocity.y); }
         anim.SetFloat(AnimationStrings.yVelocity, rigidbod.velocity.y);
     }
 
@@ -198,6 +215,8 @@ public class PlayerController : MonoBehaviour
             playerInfo.jumpBoost = jumpBoost;
             playerInfo.keyA = keyA;
             playerInfo.keyB = keyB;
+            playerInfo.spdBoost = spdBoost;
+            playerInfo.atkBoost = atkBoost;
             switcher.LoadNextLvl(switcher.lvlSceneNum);
         } 
     }

@@ -7,8 +7,8 @@ using UnityEngine.UI;
 using static UnityEngine.UI.Image;
 /*
  * Written By: Gianni Coladonato
- * ID: 2414537
- * Last Modified (Date): 07-12-2024
+ * Date Created: 17-12-2024 | Last Modified: 26-04-2025
+ * 
  * This scipt is used to control the main menu components
  */
 public class MainMenuScript : MonoBehaviour
@@ -48,6 +48,8 @@ public class MainMenuScript : MonoBehaviour
         playerInfo.spawnPositions = new Vector2[15];
         playerInfo.keyA = false;
         playerInfo.keyB = false;
+        playerInfo.atkBoost = 1;
+        playerInfo.spdBoost = 1;
     }
 
     //Quits the game

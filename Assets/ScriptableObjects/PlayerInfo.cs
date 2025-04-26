@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 /*
  * Written By: Gianni Coladonato
- * Date Created: 08-12-2025 | Last Modified: 13-04-2025
+ * Date Created: 08-12-2025 | Last Modified: 26-04-2025
  * 
  * This script is used to store player info between scenes
  */
@@ -19,4 +19,6 @@ public class PlayerInfo : ScriptableObject
     public bool keyA;
     public bool keyB;
     public List<GameObject> weapons;
+    public float atkBoost;
+    public int spdBoost;
 }
