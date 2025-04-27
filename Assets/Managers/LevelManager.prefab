@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1551149536321579283}
   - component: {fileID: 2417255880488775733}
-  - component: {fileID: 2074351817606556754}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -51,19 +50,3 @@ MonoBehaviour:
   - {fileID: 157894555782345553, guid: a409ea99a81b7eb4e9e318375775f540, type: 3}
   - {fileID: 157894555782345553, guid: a0741202855035a4da6a4f8ee99a4f00, type: 3}
   potionSpawnPos: {fileID: 0}
---- !u!114 &2074351817606556754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2780763491994969915}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b642f9fcbf505c8438486362a1d71939, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rootNode:
-    isUnlocked: 0
-    upgradeName: 
-    children: []

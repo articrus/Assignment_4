@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 /*
  * Written By: Gianni Coladonato
- * Date Created: 19-11-2025 | Last Modified: 13-04-2025
+ * Date Created: 19-11-2025 | Last Modified: 27-04-2025
  * 
  * This script is used to control the player and manage inputs
  */
@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigidbod;
     Animator anim;
     TouchingDirections touchingDirections;
-    Damageable damageable;
+    public Damageable damageable;
     LevelLoader switcher;
     public PlayerDamage playerDamage;
     public LinkedList<GameObject> weapons;
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     public bool hasSpellBolt;
 
     //Upgrade boosts
-    public int spdBoost;
+    public float spdBoost;
     private float atkBoost;
     public float AttackBoost
     {
@@ -278,6 +278,14 @@ public class PlayerController : MonoBehaviour
     public void OnStuck(InputAction.CallbackContext context)
     {
         if(context.started) { anim.SetBool(AnimationStrings.isAlive, false); }
+    }
+
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (context.started)
+        {
+            CanvasManager.CMInstance.TogglePause();
+        }
     }
 
     public void SetCurrentWeapon(GameObject currentWeapon)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 /*
  * Written By: Gianni Coladonato
- * Date Created: 26-04-2025 | Last Modified: 26-04-2025
+ * Date Created: 26-04-2025 | Last Modified: 27-04-2025
  * 
  * This script controls the upgrade tree
  */
@@ -21,10 +21,10 @@ public class UpgradeTree : MonoBehaviour
         //A path
         UpgradeNode pathA = new UpgradeNode("A", 0);
         UpgradeNode pathAA = new UpgradeNode("AA", 0);
-        UpgradeNode pathAB = new UpgradeNode("AB", 1);
+        UpgradeNode pathAB = new UpgradeNode("AB", 3);
         //B path
         UpgradeNode pathB = new UpgradeNode("B", 1);
-        UpgradeNode pathBA = new UpgradeNode("BA", 0);
+        UpgradeNode pathBA = new UpgradeNode("BA", 2);
         UpgradeNode pathBB = new UpgradeNode("BB", 1);
 
         //Add nodes to tree
@@ -61,12 +61,6 @@ public class UpgradeTree : MonoBehaviour
         {
             Debug.Log("No more upgrades for you :(");
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        CreateUpgradeTree();
     }
 
     //Using this for testing

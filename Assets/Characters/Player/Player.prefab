@@ -272,6 +272,7 @@ MonoBehaviour:
   jumpBoost: 1
   hasSpellJump: 0
   hasSpellBolt: 0
+  spdBoost: 0
   _isMoving: 0
   _isRunning: 0
   _isFacingRight: 1
@@ -472,6 +473,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 1aeaae47-ffe2-462e-a639-8c2ba99a3dd9
     m_ActionName: Player/WeaponSwitchR[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5922378872485759864}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 533e78db-9508-4a4a-a11b-d5b378965358
+    m_ActionName: Player/Pause[/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
