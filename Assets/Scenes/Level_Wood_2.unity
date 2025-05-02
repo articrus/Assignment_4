@@ -361,6 +361,8 @@ Transform:
   m_Children:
   - {fileID: 1591783074}
   - {fileID: 980753367}
+  - {fileID: 1069636481}
+  - {fileID: 647152419}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &237354947
@@ -864,6 +866,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75a32bd90b8bab84f97c47d1299b0a84, type: 3}
+--- !u!1 &647152418
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 647152419}
+  m_Layer: 0
+  m_Name: UpgradePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &647152419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647152418}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26.15, y: 0, z: -0.24749142}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 212729918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &841178863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1028,12 +1061,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069636480}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 93, y: 1, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 34.16094, y: -4.6249957, z: -0.24749142}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 212729918}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1258150445
 PrefabInstance:
@@ -1087,6 +1120,14 @@ PrefabInstance:
       propertyPath: potionSpawnPos
       value: 
       objectReference: {fileID: 1069636481}
+    - target: {fileID: 2417255880488775733, guid: 108ac6a7a2d2c01479328260c6167a6f, type: 3}
+      propertyPath: scenePointValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417255880488775733, guid: 108ac6a7a2d2c01479328260c6167a6f, type: 3}
+      propertyPath: upgradePointPos
+      value: 
+      objectReference: {fileID: 1623582201}
     - target: {fileID: 2780763491994969915, guid: 108ac6a7a2d2c01479328260c6167a6f, type: 3}
       propertyPath: m_Name
       value: LevelManager
@@ -65854,4 +65895,3 @@ SceneRoots:
   - {fileID: 212729918}
   - {fileID: 1266943831}
   - {fileID: 1623582201}
-  - {fileID: 1069636481}

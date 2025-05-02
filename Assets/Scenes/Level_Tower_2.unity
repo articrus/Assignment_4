@@ -311,6 +311,7 @@ Transform:
   - {fileID: 1706186131}
   - {fileID: 1940078640}
   - {fileID: 983575949}
+  - {fileID: 1418631358}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &237354947
@@ -479,6 +480,10 @@ PrefabInstance:
       propertyPath: potionSpawnPos
       value: 
       objectReference: {fileID: 983575949}
+    - target: {fileID: 2417255880488775733, guid: 108ac6a7a2d2c01479328260c6167a6f, type: 3}
+      propertyPath: upgradePointPos
+      value: 
+      objectReference: {fileID: 1418631358}
     - target: {fileID: 2780763491994969915, guid: 108ac6a7a2d2c01479328260c6167a6f, type: 3}
       propertyPath: m_Name
       value: LevelManager
@@ -1650,6 +1655,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ba36abf4c150314d8bc687de9cb8008, type: 3}
+--- !u!1 &1418631357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1418631358}
+  m_Layer: 0
+  m_Name: UpgradePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1418631358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418631357}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.725, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 212729918}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1486981654
 GameObject:
   m_ObjectHideFlags: 3

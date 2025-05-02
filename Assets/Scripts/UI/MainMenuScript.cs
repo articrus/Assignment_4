@@ -7,7 +7,7 @@ using UnityEngine.UI;
 using static UnityEngine.UI.Image;
 /*
  * Written By: Gianni Coladonato
- * Date Created: 17-12-2024 | Last Modified: 26-04-2025
+ * Date Created: 17-12-2024 | Last Modified: 01-05-2025
  * 
  * This scipt is used to control the main menu components
  */
@@ -20,6 +20,7 @@ public class MainMenuScript : MonoBehaviour
     public LevelLoader loader;
     public PlayerInfo playerInfo;
     public OptionsSettings settings;
+    [SerializeField] UpgradeStorage storage;
 
     //ToGetComponents
     Vector3 hovering;
@@ -38,6 +39,7 @@ public class MainMenuScript : MonoBehaviour
         loader.LoadNextLvl(1);
     }
 
+    //Reset the player's stats
     void setDefaultPlayerInfo()
     {
         playerInfo.currentHP = 100;
@@ -50,6 +52,7 @@ public class MainMenuScript : MonoBehaviour
         playerInfo.keyB = false;
         playerInfo.atkBoost = 1;
         playerInfo.spdBoost = 1;
+        storage.rootNode = null; //Reset player's upgrade progression
     }
 
     //Quits the game

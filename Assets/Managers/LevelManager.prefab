@@ -50,3 +50,5 @@ MonoBehaviour:
   - {fileID: 157894555782345553, guid: a409ea99a81b7eb4e9e318375775f540, type: 3}
   - {fileID: 157894555782345553, guid: a0741202855035a4da6a4f8ee99a4f00, type: 3}
   potionSpawnPos: {fileID: 0}
+  upgradePointPos: {fileID: 0}
+  upgradePoint: {fileID: 9030989529825163721, guid: 6844751818147b44eb733661a557a75e, type: 3}
